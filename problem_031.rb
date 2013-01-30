@@ -13,10 +13,10 @@ for i in 0..200 # 1p
 			for l in 0..20 # 10p
 				for m in 0..10 # 20p
 					for n in 0..4 # 50p
-						for o in 0..2 # 1 pound
-							for p in 0..1 # 2 pounds
+						for o in 0..2 # 1 £
+							for p in 0..1 # 2 £
 								if (1 * i)+(2 * j)+(5 * k)+(10 * l)+(20 * m)+(50 * n)+(100 * o)+(200 * p) == 200
-								# puts "#{i} 1p, #{j} 2p, #{k} 5p, #{l} 10p, #{m} 20p, #{n} 50p, #{o} L1, and #{p} L2"
+								# puts "#{i} 1p, #{j} 2p, #{k} 5p, #{l} 10p, #{m} 20p, #{n} 50p, #{o} £1, and #{p} £2"
 									@counter = @counter + 1
 								end
 							end
