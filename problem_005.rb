@@ -1,13 +1,11 @@
 x = 1
-
 def statement(i)
-	for p in 1..20
-		puts i, p
-		i % p == 0
-	end
+  for p in 1..20
+    if i % p != 0
+      p += 1
+    end
+    puts i
+  end
 end  
-
-until statement(x) == true
-	x += 1
-end
+x += 1 until statement(x) == true
 puts x
