@@ -1,24 +1,22 @@
-# A Pythagorean triplet is a set of three natural numbers, a  b  c, for which,
-# a^2 + b^2 = c^2
-# For example, 3^2 + 4^2 = 9 + 16 = 25 = 5^2.
-# There exists exactly one Pythagorean triplet for which a + b + c = 1000.
-# Find the product abc.
-
-for a in (1..1000)
-	 a if a % 2 == 0 # One must be even ##These lines don't seem to be taking...
-	 for b in (1..1000)
-	 b if b % 2 != 0 # One must be odd
-	 	for c in (1..1000)
-	 	c if c % 4 == 0 # The squared result must be a modulo of 4
-	 		if a**2 + b**2 == c**2
-	 	#	puts "#{a}, #{b}, and #{c}."
-	 				if a + b + c == 1000
-	 					puts "#{a}, #{b}, and #{c} work!"
-	 					puts "The answer is #{a * b * c}" 
-	 					# put a loop break in here
-	 				end
-	 	end
-	 end
+a = (1..998).find_all{|d| d % 2 == 0}
+b = (1..998).find_all{|e| e % 2 != 0} 
+c = (1..998).find_all{|f| f % 2 != 0}
+cut = 1
+unless cut == 0
+for i in a[1..(a.length)]
+	for j in b[1..(b.length)]
+ 	for k in c[1..(c.length)]
+			if i*i + j*j == k*k
+				puts "#{i}, #{j}, and #{k} work"
+				if i + j + k == 1000
+					cut -= 1
+					puts "*************** #{i}, #{j}, and #{k} work"
+					answer = i * j * k
+					puts "The answer is #{answer}"
+				## Why doesn't the loop stop!?
+				end
+			end
+		end
 	end
 end
-puts "all done"
+end
