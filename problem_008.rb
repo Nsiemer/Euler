@@ -7,10 +7,10 @@ ary1 = x.to_s.scan(/\d/).map {|i| i.to_i}
 ary2 = Array.new
 
 while ary2.length <= ary1.length
-ary2.push(ary1[0..4].inject(1, :*))
-		# same thing as => `@ary2.push(array[a..b].inject(1){|prod, element| prod * element})`
-ary1.rotate!
-		# Or start begin loop w/ `a = -4; b = 0` for range and end loop w/ `a +=1; b += 1`
+	ary2.push(ary1[0..4].inject(1, :*))
+	# same thing as => `@ary2.push(array[a..b].inject(1){|prod, element| prod * element})`
+	ary1.rotate!
+	# Or start begin loop w/ `a = -4; b = 0` for range and end loop w/ `a +=1; b += 1`
 end
 
 puts "The answer is #{ary2.sort.max}"
