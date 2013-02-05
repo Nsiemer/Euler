@@ -18,13 +18,11 @@ ary = []
 
 @max = 1
 @counter = 1
-@factor = []
+@factor = [1]
 	
 def runner(p)
- now = Time.now
 	@factor = (2..p).find_all{|x| p % x == 0}
-	@factor.insert(0, 1)
-	puts "#{p} and #{@factor.length} Took #{Time.now - now} seconds"
+	puts "#{p} and #{@factor.length}"
 	@counter += 1
 	@max += @counter
 end
