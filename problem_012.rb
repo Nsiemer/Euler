@@ -19,7 +19,7 @@
 	
 def runner(p)
 	@factor = (2..p).find_all{|x| p % x == 0}
-	puts "#{p} and #{@factor.length}"
+ #	puts "#{p} and #{@factor.length}"
 	@counter += 1
 	@max += @counter
 end
