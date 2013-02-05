@@ -24,6 +24,6 @@ def runner(p)
 	@max += @counter
 end
 
-while @factor.length <= 5
+while @factor.length <= 500
 	runner(@max)
 end
